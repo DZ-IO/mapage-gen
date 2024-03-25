@@ -5,7 +5,7 @@ import { join } from "path";
 import { Eta } from "eta";
 import { existsSync } from "fs";
 const md = markdownit({ html: true });
-const eta = new Eta({ views: ".mapage/templates" });
+const eta = new Eta({ views: ".mapage/template" });
 async function randerMD(src, dest) {
   let fileContent = String(await readFile(src));
   fileContent = fileContent.replace(".md", ".html");
@@ -34,7 +34,8 @@ readdir(".", { recursive: true, withFileTypes: true })
       ];
       let ignfile = join(".mapage", "ignore");
       if (existsSync(ignfile)) {
-        ignore = ignore.concat(String(await readFile(ignfile)).split("\n"));
+        let ignfileContent = String(await readFile(ignfile)).split("\n");
+        if (ignfileContent.length != 0) ignore = ignore.concat();
       }
       return val.filter((e) => {
         try {
