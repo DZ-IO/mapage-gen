@@ -1,0 +1,28 @@
+{
+  "name": "mapage-gen",
+  "version": "1.0.0",
+  "description": "mapage项目的生成器",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mapage": "index.js"
+  },
+  "keywords": [],
+  "author": "大泽IO",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DZ-IO/mapage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DZ-IO/mapage/issues"
+  },
+  "homepage": "https://github.com/DZ-IO/mapage#readme",
+  "dependencies": {
+    "eta": "^3.4.0",
+    "markdown-it": "^14.1.0"
+  }
+}
